@@ -38,8 +38,10 @@ void prepend(List* &list, string val){
 
 //This function removes the first item from the list
 void removeFirst(List* &list){
-    //❓ Lab Question 9
-    //YOUR CODE HERE
+    List* turnip = list;
+    list =list->next;
+    delete list;
+    
 }
 
 //This function returns true if the list haystck
@@ -47,7 +49,12 @@ void removeFirst(List* &list){
 bool contains(List* haystack, string needle){
     //❓ Lab Question 10
     //YOUR CODE HERE
-    return false;
+    if(*haystack==needle){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 void insertAt(List* &list, int pos, string value){
@@ -74,9 +81,10 @@ void main(){
     prepend(dinner, "Turnips"); //❓ Lab Question 7
     printList(dinner);
 
-    //❓ Lab Question 6
+    
     // YOUR CODE TO REMOVE TURNIPS HERE:
-    printList(dinner);
+    void removeFirst(dinner); 
+    print(dinner):
 
     //❓ Lab Question 10
     cout << endl;
